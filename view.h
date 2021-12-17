@@ -4,7 +4,7 @@
 #include "model.h"
 #include "controller.h"
 
-class GUIView : public Observer, std::enable_shared_from_this<GUIView>
+class GUIView : public Observer
 {
     
 public:
