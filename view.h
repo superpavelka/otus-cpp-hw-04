@@ -56,7 +56,6 @@ public:
     {
         _model = model;
         _controller = controller;
-        //_model->addObserver(this);
     }
 
     void addObserver(GUIViewSptr vsptr)
