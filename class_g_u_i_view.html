@@ -63,6 +63,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="class_g_u_i_view-members.html">List of all members</a>  </div>
@@ -92,6 +93,14 @@ Collaboration diagram for GUIView:</div>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a040d342f2ab60aeb91917354af5edb73"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_u_i_view.html#a040d342f2ab60aeb91917354af5edb73">GUIViewSptr</a> = std::shared_ptr&lt; <a class="el" href="class_g_u_i_view.html">GUIView</a> &gt;</td></tr>
+<tr class="separator:a040d342f2ab60aeb91917354af5edb73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_class_observer"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_observer')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="class_observer.html">Observer</a></td></tr>
+<tr class="memitem:aafe77530e825751b0c7a8466975d0d56 inherit pub_types_class_observer"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_observer.html#aafe77530e825751b0c7a8466975d0d56">ObserverSptr</a> = std::shared_ptr&lt; <a class="el" href="class_observer.html">Observer</a> &gt;</td></tr>
+<tr class="separator:aafe77530e825751b0c7a8466975d0d56 inherit pub_types_class_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a56012e9efff511736a192ab2225b6464"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_u_i_view.html#a56012e9efff511736a192ab2225b6464">update</a> () override</td></tr>
@@ -110,12 +119,71 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a63999954babff94ec1735081cf1472eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae376ac53a24279678ba2c40eaeb2e33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_u_i_view.html#aae376ac53a24279678ba2c40eaeb2e33">removeShapeByIndex</a> (int index)</td></tr>
 <tr class="separator:aae376ac53a24279678ba2c40eaeb2e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f03add3fccfbe3dde7404f34266f43b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_u_i_view.html#a1f03add3fccfbe3dde7404f34266f43b">GUIView</a> (<a class="el" href="class_model.html#aefdb0aa2c7b2d5bba73e9c95ea876a99">Model::ModelSptr</a> model, <a class="el" href="class_controller.html#aa799501b686f0bb4f6950b4439b3c24a">Controller::ControllerSptr</a> controller)</td></tr>
+<tr class="separator:a1f03add3fccfbe3dde7404f34266f43b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b5f123309111952f1040d4a31abdcdf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_u_i_view.html#a0b5f123309111952f1040d4a31abdcdf">addObserver</a> (<a class="el" href="class_g_u_i_view.html#a040d342f2ab60aeb91917354af5edb73">GUIViewSptr</a> vsptr)</td></tr>
+<tr class="separator:a0b5f123309111952f1040d4a31abdcdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_observer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_observer')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_observer.html">Observer</a></td></tr>
+<tr class="memitem:afcc6b67be6c386f2f3d2c363aa59cb47 inherit pub_methods_class_observer"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_observer.html#afcc6b67be6c386f2f3d2c363aa59cb47">~Observer</a> ()</td></tr>
+<tr class="separator:afcc6b67be6c386f2f3d2c363aa59cb47 inherit pub_methods_class_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:af19fdb451b0fdc3dfd1181f08e3db956"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="class_g_u_i_view.html">GUIView</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_u_i_view.html#af19fdb451b0fdc3dfd1181f08e3db956">create</a> (std::shared_ptr&lt; <a class="el" href="class_model.html">Model</a> &gt; model, std::shared_ptr&lt; <a class="el" href="class_controller.html">Controller</a> &gt; controller)</td></tr>
-<tr class="separator:af19fdb451b0fdc3dfd1181f08e3db956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0e58fcd25bac8f01d49277c01243c22"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_g_u_i_view.html#a040d342f2ab60aeb91917354af5edb73">GUIViewSptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_u_i_view.html#ae0e58fcd25bac8f01d49277c01243c22">create</a> (<a class="el" href="class_model.html#aefdb0aa2c7b2d5bba73e9c95ea876a99">Model::ModelSptr</a> model, <a class="el" href="class_controller.html#aa799501b686f0bb4f6950b4439b3c24a">Controller::ControllerSptr</a> controller)</td></tr>
+<tr class="separator:ae0e58fcd25bac8f01d49277c01243c22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a040d342f2ab60aeb91917354af5edb73" name="a040d342f2ab60aeb91917354af5edb73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a040d342f2ab60aeb91917354af5edb73">&#9670;&nbsp;</a></span>GUIViewSptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_g_u_i_view.html#a040d342f2ab60aeb91917354af5edb73">GUIView::GUIViewSptr</a> =  std::shared_ptr&lt;<a class="el" href="class_g_u_i_view.html">GUIView</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a1f03add3fccfbe3dde7404f34266f43b" name="a1f03add3fccfbe3dde7404f34266f43b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f03add3fccfbe3dde7404f34266f43b">&#9670;&nbsp;</a></span>GUIView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GUIView::GUIView </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_model.html#aefdb0aa2c7b2d5bba73e9c95ea876a99">Model::ModelSptr</a>&#160;</td>
+          <td class="paramname"><em>model</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_controller.html#aa799501b686f0bb4f6950b4439b3c24a">Controller::ControllerSptr</a>&#160;</td>
+          <td class="paramname"><em>controller</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a63999954babff94ec1735081cf1472eb" name="a63999954babff94ec1735081cf1472eb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a63999954babff94ec1735081cf1472eb">&#9670;&nbsp;</a></span>addEllipse()</h2>
@@ -195,6 +263,32 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a0b5f123309111952f1040d4a31abdcdf" name="a0b5f123309111952f1040d4a31abdcdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b5f123309111952f1040d4a31abdcdf">&#9670;&nbsp;</a></span>addObserver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GUIView::addObserver </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_g_u_i_view.html#a040d342f2ab60aeb91917354af5edb73">GUIViewSptr</a>&#160;</td>
+          <td class="paramname"><em>vsptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="adb76c9aad49d0d61fcc909ddb3929abc" name="adb76c9aad49d0d61fcc909ddb3929abc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adb76c9aad49d0d61fcc909ddb3929abc">&#9670;&nbsp;</a></span>addRectangle()</h2>
 
@@ -237,8 +331,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af19fdb451b0fdc3dfd1181f08e3db956" name="af19fdb451b0fdc3dfd1181f08e3db956"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af19fdb451b0fdc3dfd1181f08e3db956">&#9670;&nbsp;</a></span>create()</h2>
+<a id="ae0e58fcd25bac8f01d49277c01243c22" name="ae0e58fcd25bac8f01d49277c01243c22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0e58fcd25bac8f01d49277c01243c22">&#9670;&nbsp;</a></span>create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,15 +341,15 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static std::shared_ptr&lt; <a class="el" href="class_g_u_i_view.html">GUIView</a> &gt; GUIView::create </td>
+          <td class="memname">static <a class="el" href="class_g_u_i_view.html#a040d342f2ab60aeb91917354af5edb73">GUIViewSptr</a> GUIView::create </td>
           <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_model.html">Model</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_model.html#aefdb0aa2c7b2d5bba73e9c95ea876a99">Model::ModelSptr</a>&#160;</td>
           <td class="paramname"><em>model</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_controller.html">Controller</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_controller.html#aa799501b686f0bb4f6950b4439b3c24a">Controller::ControllerSptr</a>&#160;</td>
           <td class="paramname"><em>controller</em>&#160;</td>
         </tr>
         <tr>

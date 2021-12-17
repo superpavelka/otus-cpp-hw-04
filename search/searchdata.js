@@ -4,7 +4,8 @@ var indexSectionsWithContent =
   1: "ceglmors",
   2: "cmorsv",
   3: "acegimnrsu~",
-  4: "з"
+  4: "ceglmors",
+  5: "з"
 };
 
 var indexSectionNames =
@@ -13,7 +14,8 @@ var indexSectionNames =
   1: "classes",
   2: "files",
   3: "functions",
-  4: "pages"
+  4: "typedefs",
+  5: "pages"
 };
 
 var indexSectionLabels =
@@ -22,6 +24,7 @@ var indexSectionLabels =
   1: "Classes",
   2: "Files",
   3: "Functions",
-  4: "Pages"
+  4: "Typedefs",
+  5: "Pages"
 };
 

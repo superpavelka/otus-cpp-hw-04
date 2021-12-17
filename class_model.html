@@ -63,6 +63,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="class_model-members.html">List of all members</a>  </div>
@@ -76,9 +77,8 @@ Inheritance diagram for Model:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_model__inherit__graph.png" border="0" usemap="#a_model_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_model_inherit__map" id="a_model_inherit__map">
-<area shape="rect" title=" " alt="" coords="90,95,147,121"/>
-<area shape="rect" href="class_observable.html" title=" " alt="" coords="5,13,93,39"/>
-<area shape="rect" title=" " alt="" coords="118,5,258,47"/>
+<area shape="rect" title=" " alt="" coords="21,80,78,107"/>
+<area shape="rect" href="class_observable.html" title=" " alt="" coords="5,5,93,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -86,12 +86,16 @@ Collaboration diagram for Model:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_model__coll__graph.png" border="0" usemap="#a_model_coll__map" alt="Collaboration graph"/></div>
 <map name="a_model_coll__map" id="a_model_coll__map">
-<area shape="rect" title=" " alt="" coords="90,95,147,121"/>
-<area shape="rect" href="class_observable.html" title=" " alt="" coords="5,13,93,39"/>
-<area shape="rect" title=" " alt="" coords="118,5,258,47"/>
+<area shape="rect" title=" " alt="" coords="21,80,78,107"/>
+<area shape="rect" href="class_observable.html" title=" " alt="" coords="5,5,93,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:aefdb0aa2c7b2d5bba73e9c95ea876a99"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#aefdb0aa2c7b2d5bba73e9c95ea876a99">ModelSptr</a> = std::shared_ptr&lt; <a class="el" href="class_model.html">Model</a> &gt;</td></tr>
+<tr class="separator:aefdb0aa2c7b2d5bba73e9c95ea876a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae99e168e897044347e5c4d97e827c8d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#ae99e168e897044347e5c4d97e827c8d5">createNewFile</a> ()</td></tr>
@@ -100,26 +104,41 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aecd7030f32044d0853a3e78bcccfb8dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c5de3c2a2728a29e8897d3525ffecae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a7c5de3c2a2728a29e8897d3525ffecae">exportToFile</a> (const std::string &amp;filename)</td></tr>
 <tr class="separator:a7c5de3c2a2728a29e8897d3525ffecae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab48bc06f8d892aa33b1f28ab2fcc38b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#ab48bc06f8d892aa33b1f28ab2fcc38b7">addShape</a> (std::shared_ptr&lt; <a class="el" href="class_shape.html">Shape</a> &gt; shape)</td></tr>
-<tr class="separator:ab48bc06f8d892aa33b1f28ab2fcc38b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0c5c8eb5faab52431967e2ea479de8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#af0c5c8eb5faab52431967e2ea479de8b">addShape</a> (<a class="el" href="class_shape.html#a44591e8b759f4765f0b5957a2e8721c0">Shape::ShapeSptr</a> shape)</td></tr>
+<tr class="separator:af0c5c8eb5faab52431967e2ea479de8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c5b4809dbf08f1f94ba41dff770c403"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a3c5b4809dbf08f1f94ba41dff770c403">removeShapeByIndex</a> (int index)</td></tr>
 <tr class="separator:a3c5b4809dbf08f1f94ba41dff770c403"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a885fe0a94a49edae887a8c971b0be920"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a885fe0a94a49edae887a8c971b0be920">getState</a> () const</td></tr>
 <tr class="separator:a885fe0a94a49edae887a8c971b0be920"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_observable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_observable')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_observable.html">Observable</a></td></tr>
-<tr class="memitem:a41116955e42a9135cafed2536615576b inherit pub_methods_class_observable"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_observable.html#a41116955e42a9135cafed2536615576b">addObserver</a> (<a class="el" href="class_observer.html">Observer</a> *observer)</td></tr>
-<tr class="separator:a41116955e42a9135cafed2536615576b inherit pub_methods_class_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06cc445f5d4fd2d93123dcc6273e6d28 inherit pub_methods_class_observable"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_observable.html#a06cc445f5d4fd2d93123dcc6273e6d28">addObserver</a> (<a class="el" href="class_observer.html#aafe77530e825751b0c7a8466975d0d56">Observer::ObserverSptr</a> observer)</td></tr>
+<tr class="separator:a06cc445f5d4fd2d93123dcc6273e6d28 inherit pub_methods_class_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeefc10e19b4a9debc8248a09a2363d77 inherit pub_methods_class_observable"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_observable.html#aeefc10e19b4a9debc8248a09a2363d77">notifyAll</a> ()</td></tr>
 <tr class="separator:aeefc10e19b4a9debc8248a09a2363d77 inherit pub_methods_class_observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a26d5810a68e321058d042238c4192e22"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="class_model.html">Model</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a26d5810a68e321058d042238c4192e22">create</a> ()</td></tr>
-<tr class="separator:a26d5810a68e321058d042238c4192e22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2f89c0565023015924e55ea13258e96"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_model.html#aefdb0aa2c7b2d5bba73e9c95ea876a99">ModelSptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#ae2f89c0565023015924e55ea13258e96">create</a> ()</td></tr>
+<tr class="separator:ae2f89c0565023015924e55ea13258e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="aefdb0aa2c7b2d5bba73e9c95ea876a99" name="aefdb0aa2c7b2d5bba73e9c95ea876a99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefdb0aa2c7b2d5bba73e9c95ea876a99">&#9670;&nbsp;</a></span>ModelSptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_model.html#aefdb0aa2c7b2d5bba73e9c95ea876a99">Model::ModelSptr</a> =  std::shared_ptr&lt;<a class="el" href="class_model.html">Model</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab48bc06f8d892aa33b1f28ab2fcc38b7" name="ab48bc06f8d892aa33b1f28ab2fcc38b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab48bc06f8d892aa33b1f28ab2fcc38b7">&#9670;&nbsp;</a></span>addShape()</h2>
+<a id="af0c5c8eb5faab52431967e2ea479de8b" name="af0c5c8eb5faab52431967e2ea479de8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0c5c8eb5faab52431967e2ea479de8b">&#9670;&nbsp;</a></span>addShape()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -130,7 +149,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Model::addShape </td>
           <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_shape.html">Shape</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_shape.html#a44591e8b759f4765f0b5957a2e8721c0">Shape::ShapeSptr</a>&#160;</td>
           <td class="paramname"><em>shape</em></td><td>)</td>
           <td></td>
         </tr>
@@ -144,8 +163,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a26d5810a68e321058d042238c4192e22" name="a26d5810a68e321058d042238c4192e22"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26d5810a68e321058d042238c4192e22">&#9670;&nbsp;</a></span>create()</h2>
+<a id="ae2f89c0565023015924e55ea13258e96" name="ae2f89c0565023015924e55ea13258e96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2f89c0565023015924e55ea13258e96">&#9670;&nbsp;</a></span>create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -154,7 +173,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static std::shared_ptr&lt; <a class="el" href="class_model.html">Model</a> &gt; Model::create </td>
+          <td class="memname">static <a class="el" href="class_model.html#aefdb0aa2c7b2d5bba73e9c95ea876a99">ModelSptr</a> Model::create </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

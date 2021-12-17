@@ -68,36 +68,42 @@ $(function() {
 <a href="observer_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_observer.html">    5</a></span><span class="keyword">class </span><a class="code hl_class" href="class_observer.html">Observer</a></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_observer.html#ac75e4b339faeb3ea6fe0a01bf0b4a215">    8</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_observer.html#ac75e4b339faeb3ea6fe0a01bf0b4a215">update</a>() = 0;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>};</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="class_observer.html">    6</a></span><span class="keyword">class </span><a class="code hl_class" href="class_observer.html">Observer</a></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_observer.html#aafe77530e825751b0c7a8466975d0d56">    9</a></span>    <span class="keyword">using</span> <a class="code hl_typedef" href="class_observer.html#aafe77530e825751b0c7a8466975d0d56">ObserverSptr</a> = std::shared_ptr&lt;Observer&gt;;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_observable.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="class_observable.html">Observable</a> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_observable.html#a41116955e42a9135cafed2536615576b">   14</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_observable.html#a41116955e42a9135cafed2536615576b">addObserver</a>(<a class="code hl_class" href="class_observer.html">Observer</a>* observer)</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        _observers.push_back(observer);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    }</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_observable.html#aeefc10e19b4a9debc8248a09a2363d77">   18</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_observable.html#aeefc10e19b4a9debc8248a09a2363d77">notifyAll</a>()</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_observer.html#ac75e4b339faeb3ea6fe0a01bf0b4a215">   11</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_observer.html#ac75e4b339faeb3ea6fe0a01bf0b4a215">update</a>() = 0;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_observer.html#afcc6b67be6c386f2f3d2c363aa59cb47">   12</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_observer.html#afcc6b67be6c386f2f3d2c363aa59cb47">~Observer</a>() {}</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>};</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_observable.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="class_observable.html">Observable</a> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_observable.html#a06cc445f5d4fd2d93123dcc6273e6d28">   18</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_observable.html#a06cc445f5d4fd2d93123dcc6273e6d28">addObserver</a>(<a class="code hl_typedef" href="class_observer.html#aafe77530e825751b0c7a8466975d0d56">Observer::ObserverSptr</a> observer)</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordtype">int</span> size = (int)_observers.size();</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; size; i++)</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            _observers[i]-&gt;update();</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        }</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    std::vector&lt;Observer*&gt; _observers;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
-<div class="ttc" id="aclass_observable_html"><div class="ttname"><a href="class_observable.html">Observable</a></div><div class="ttdef"><b>Definition:</b> observer.h:12</div></div>
-<div class="ttc" id="aclass_observable_html_a41116955e42a9135cafed2536615576b"><div class="ttname"><a href="class_observable.html#a41116955e42a9135cafed2536615576b">Observable::addObserver</a></div><div class="ttdeci">void addObserver(Observer *observer)</div><div class="ttdef"><b>Definition:</b> observer.h:14</div></div>
-<div class="ttc" id="aclass_observable_html_aeefc10e19b4a9debc8248a09a2363d77"><div class="ttname"><a href="class_observable.html#aeefc10e19b4a9debc8248a09a2363d77">Observable::notifyAll</a></div><div class="ttdeci">void notifyAll()</div><div class="ttdef"><b>Definition:</b> observer.h:18</div></div>
-<div class="ttc" id="aclass_observer_html"><div class="ttname"><a href="class_observer.html">Observer</a></div><div class="ttdef"><b>Definition:</b> observer.h:6</div></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        _observers.push_back(observer);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_observable.html#aeefc10e19b4a9debc8248a09a2363d77">   22</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_observable.html#aeefc10e19b4a9debc8248a09a2363d77">notifyAll</a>()</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordtype">int</span> size = (int)_observers.size();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; size; i++)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            _observers[i]-&gt;update();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    std::vector&lt;Observer::ObserverSptr&gt; _observers;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>};</div>
+<div class="ttc" id="aclass_observable_html"><div class="ttname"><a href="class_observable.html">Observable</a></div><div class="ttdef"><b>Definition:</b> observer.h:16</div></div>
+<div class="ttc" id="aclass_observable_html_a06cc445f5d4fd2d93123dcc6273e6d28"><div class="ttname"><a href="class_observable.html#a06cc445f5d4fd2d93123dcc6273e6d28">Observable::addObserver</a></div><div class="ttdeci">void addObserver(Observer::ObserverSptr observer)</div><div class="ttdef"><b>Definition:</b> observer.h:18</div></div>
+<div class="ttc" id="aclass_observable_html_aeefc10e19b4a9debc8248a09a2363d77"><div class="ttname"><a href="class_observable.html#aeefc10e19b4a9debc8248a09a2363d77">Observable::notifyAll</a></div><div class="ttdeci">void notifyAll()</div><div class="ttdef"><b>Definition:</b> observer.h:22</div></div>
+<div class="ttc" id="aclass_observer_html"><div class="ttname"><a href="class_observer.html">Observer</a></div><div class="ttdef"><b>Definition:</b> observer.h:7</div></div>
+<div class="ttc" id="aclass_observer_html_aafe77530e825751b0c7a8466975d0d56"><div class="ttname"><a href="class_observer.html#aafe77530e825751b0c7a8466975d0d56">Observer::ObserverSptr</a></div><div class="ttdeci">std::shared_ptr&lt; Observer &gt; ObserverSptr</div><div class="ttdef"><b>Definition:</b> observer.h:9</div></div>
 <div class="ttc" id="aclass_observer_html_ac75e4b339faeb3ea6fe0a01bf0b4a215"><div class="ttname"><a href="class_observer.html#ac75e4b339faeb3ea6fe0a01bf0b4a215">Observer::update</a></div><div class="ttdeci">virtual void update()=0</div></div>
+<div class="ttc" id="aclass_observer_html_afcc6b67be6c386f2f3d2c363aa59cb47"><div class="ttname"><a href="class_observer.html#afcc6b67be6c386f2f3d2c363aa59cb47">Observer::~Observer</a></div><div class="ttdeci">virtual ~Observer()</div><div class="ttdef"><b>Definition:</b> observer.h:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
