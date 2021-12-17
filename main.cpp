@@ -5,9 +5,11 @@
 
 int main()
 {
-	std::shared_ptr<Model> model = Model::create();
-    std::shared_ptr<Controller> controller = Controller::create(model);
-	std::shared_ptr<GUIView> gui_view = GUIView::create(model, controller);	
+    Model::ModelSptr model = Model::create();
+    Controller::ControllerSptr controller = Controller::create(model);
+    GUIView::GUIViewSptr gui_view = GUIView::create(model, controller);
+
+    gui_view->addObserver(gui_view);
 
     gui_view->createNewFile();
 

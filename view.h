@@ -1,14 +1,16 @@
 #pragma once
 
 #include <iostream>
-#include <memory>
 #include "model.h"
+#include "controller.h"
 
-class GUIView : public Observer, public std::enable_shared_from_this<GUIView>
+class GUIView : public Observer, std::enable_shared_from_this<GUIView>
 {
-
+    
 public:
     
+    using GUIViewSptr = std::shared_ptr<GUIView>;
+
     virtual void update() override
     {
         std::cout << _model->getState();
@@ -50,20 +52,25 @@ public:
         _controller->removeShapeByIndex(index);
     }
 
-private:
-    std::shared_ptr<Model> _model;
-    std::shared_ptr<Controller> _controller;
-
-    GUIView(std::shared_ptr<Model> model, std::shared_ptr<Controller> controller)
+    GUIView(Model::ModelSptr model, Controller::ControllerSptr controller)
     {
         _model = model;
         _controller = controller;
-        _model->addObserver(this);
+        //_model->addObserver(this);
     }
 
-public:
-    [[nodiscard]] static std::shared_ptr<GUIView> create(std::shared_ptr<Model> model, std::shared_ptr<Controller> controller)
+    void addObserver(GUIViewSptr vsptr)
     {
-        return std::shared_ptr<GUIView>(new GUIView(model, controller));
+        _model->addObserver(vsptr);
+    }
+
+private:
+    Model::ModelSptr _model;
+    Controller::ControllerSptr _controller;    
+
+public:
+    [[nodiscard]] static GUIViewSptr create(Model::ModelSptr model, Controller::ControllerSptr controller)
+    {
+        return GUIViewSptr(new GUIView(model, controller));
     }
 };

@@ -1,17 +1,21 @@
 #pragma once
 
 #include <vector>
+#include <memory>
 
 class Observer
 {
 public:
+    using ObserverSptr = std::shared_ptr<Observer>;
+
     virtual void update() = 0;
+    virtual ~Observer() {}
 };
 
 class Observable 
 {
 public:
-    void addObserver(Observer* observer)
+    void addObserver(Observer::ObserverSptr observer)
     {
         _observers.push_back(observer);
     }
@@ -24,5 +28,5 @@ public:
         }
     }
 private:
-    std::vector<Observer*> _observers;
+    std::vector<Observer::ObserverSptr> _observers;
 };

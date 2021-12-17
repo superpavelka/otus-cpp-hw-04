@@ -5,9 +5,11 @@
 #include <string>
 #include <memory>
 
-class Model : public Observable, public std::enable_shared_from_this<Model>
-{
+class Model : public Observable
+{    
 public:    
+
+    using ModelSptr = std::shared_ptr<Model>;    
 
     void createNewFile()
     {
@@ -29,7 +31,7 @@ public:
         notifyAll();
     }
 
-    void addShape(std::shared_ptr<Shape> shape)
+    void addShape(Shape::ShapeSptr shape)
     {
         _state = shape->show() + " was added to document\n";
         _shapes.push_back(shape);
@@ -50,9 +52,9 @@ public:
         notifyAll();
     }
 
-    [[nodiscard]] static std::shared_ptr<Model> create()
+    [[nodiscard]] static ModelSptr create()
     {
-        return std::shared_ptr<Model>(new Model());
+        return ModelSptr(new Model());
     }
 
     std::string getState() const
@@ -73,5 +75,5 @@ private:
     }
 
     std::string _state;
-    std::vector<std::shared_ptr<Shape>> _shapes;
+    std::vector<Shape::ShapeSptr> _shapes;
 };

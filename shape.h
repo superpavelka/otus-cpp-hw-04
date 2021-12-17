@@ -6,18 +6,23 @@
 class Shape
 {
 public:
+    using ShapeSptr = std::shared_ptr<Shape>;
+
     virtual ~Shape() {}
     virtual std::string show() const = 0;
 };
 
-class Line : public Shape, public std::enable_shared_from_this<Line>
+class Line : public Shape
 {
-public:    
-    [[nodiscard]] static std::shared_ptr<Line> create(std::pair<float, float> startPt, float length)
+public:
+    
+    using LineSptr = std::shared_ptr<Line>;
+
+    [[nodiscard]] static LineSptr create(std::pair<float, float> startPt, float length)
     {
         _startPt = startPt;
         _length = length;
-        return std::shared_ptr<Line>(new Line());
+        return LineSptr(new Line());
     }
     std::string show() const override
     {
@@ -31,15 +36,17 @@ private:
     static float _length;
 };
 
-class Rectangle : public Shape, public std::enable_shared_from_this<Rectangle>
+class Rectangle : public Shape
 {
 public:
-    [[nodiscard]] static std::shared_ptr<Rectangle> create(std::pair<float, float> leftToptPt, float length, float width)
+    using RectangleSptr = std::shared_ptr<Rectangle>;
+
+    [[nodiscard]] static RectangleSptr create(std::pair<float, float> leftToptPt, float length, float width)
     {
         _leftToptPt = leftToptPt;
         _length = length;
         _width = width;
-        return std::shared_ptr<Rectangle>(new Rectangle());
+        return RectangleSptr(new Rectangle());
     }
     std::string show() const override
     {
@@ -55,15 +62,17 @@ private:
     static float _width;
 };
 
-class Ellipse : public Shape, public std::enable_shared_from_this<Ellipse>
+class Ellipse : public Shape
 {
 public:
-    [[nodiscard]] static std::shared_ptr<Ellipse> create(std::pair<float, float> centerPt, float majorAxis, float minorAxis)
+    using EllipseSptr = std::shared_ptr<Ellipse>;
+
+    [[nodiscard]] static EllipseSptr create(std::pair<float, float> centerPt, float majorAxis, float minorAxis)
     {
         _centerPt = centerPt;
         _majorAxis = majorAxis;
         _minorAxis = minorAxis;
-        return std::shared_ptr<Ellipse>(new Ellipse());
+        return EllipseSptr(new Ellipse());
     }
     std::string show() const override
     {

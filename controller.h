@@ -2,12 +2,14 @@
 #include "model.h"
 
 class Controller : public std::enable_shared_from_this<Controller>
-{
+{    
 public:    
 
-    [[nodiscard]] static std::shared_ptr<Controller> create(std::shared_ptr<Model> model)
+    using ControllerSptr = std::shared_ptr<Controller>;
+
+    [[nodiscard]] static ControllerSptr create(Model::ModelSptr model)
     {
-        return std::shared_ptr<Controller>(new Controller(model));
+        return ControllerSptr(new Controller(model));
     }
 
     void createNewFile()
@@ -46,10 +48,10 @@ public:
     }
 
 private:
-    std::shared_ptr<Model> _model;
+    Model::ModelSptr _model;
 
 public:
-    Controller(std::shared_ptr<Model> model)
+    Controller(Model::ModelSptr model)
     {
         _model = model;
     }
